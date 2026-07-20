@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result | ML Trivia 2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>ML Trivia <span>2026</span></h2>
+    </div>
+
+</header>
+
+<section class="result-section">
+
+    <div class="result-card">
+
+        <div class="trophy">
+            <i class="fas fa-trophy"></i>
+        </div>
+
+        <h1>Quiz Completed!</h1>
+
+        <p>Congratulations on completing the Mathematics League Trivia.</p>
+
+        <div class="result-info">
+
+            <div class="result-item">
+                <span>Participant</span>
+                <h3 id="studentName">Loading...</h3>
+            </div>
+
+            <div class="result-item">
+                <span>Score</span>
+                <h3 id="score">0 / 10</h3>
+            </div>
+
+            <div class="result-item">
+                <span>Percentage</span>
+                <h3 id="percentage">0%</h3>
+            </div>
+
+            <div class="result-item">
+                <span>Airtime Earned</span>
+                <h3 id="airtime">₦0</h3>
+            </div>
+
+        </div>
+
+        <div id="performance" class="performance">
+
+            Excellent!
+
+        </div>
+
+        <div class="buttons">
+
+            <a href="index.html" class="btn">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+
+            <button id="shareBtn" class="btn share">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Share Result
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/result.js"></script>
+
+</body>
+</html>

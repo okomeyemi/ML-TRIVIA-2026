@@ -1,0 +1,140 @@
+/*=========================
+RESET
+=========================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a, #0f172a);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo span {
+  color: #fbbf24;
+}
+
+/*=========================
+INSTRUCTIONS
+=========================*/
+
+.instructions {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px;
+}
+
+.instruction-card {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+}
+
+.step {
+  display: inline-block;
+  background: #fbbf24;
+  color: #1e3a8a;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.instruction-card h1 {
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.instruction-card p {
+  color: #dbeafe;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.instruction-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.instruction-card ul li {
+  background: rgba(255, 255, 255, .08);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+#startQuiz {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #fbbf24;
+  color: #1e3a8a;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#startQuiz:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(251, 191, 36, .4);
+}
+
+/*=========================
+MOBILE
+=========================*/
+
+@media(max-width:768px) {
+  
+  .instruction-card {
+    padding: 25px;
+  }
+  
+  .instruction-card h1 {
+    font-size: 2rem;
+  }
+  
+}

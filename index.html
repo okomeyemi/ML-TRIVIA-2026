@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Trivia 2026</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<div id="progress-bar"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>ML Trivia <span>2026</span></h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#prizes">Prizes</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+<div class="math-symbol pi">π</div>
+<div class="math-symbol sigma">∑</div>
+<div class="math-symbol root">√</div>
+<div class="math-symbol integral">∫</div>            
+            <span class="badge">
+                🏆 Mathematics League Competition
+            </span>
+
+            <h1>
+                ML Trivia <span>2026</span>
+            </h1>
+
+            <p>
+                Test your Mathematics knowledge, compete with fellow
+                students and win exciting airtime rewards.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn primary">
+                    Register Now
+                </a>
+
+                <a href="#about" class="btn secondary">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="circle one"></div>
+            <div class="circle two"></div>
+
+            <div class="math-card">
+
+                <i class="fas fa-trophy"></i>
+
+                <h3>Win up to</h3>
+
+                <h2>₦1,000</h2>
+
+                <p>Airtime Reward</p>
+
+            </div>
+
+        </div>
+        
+
+
+    </section>
+    
+<div class="wave-divider"></div>    
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about hidden" id="about">
+
+        <h2>About ML Trivia 2026</h2>
+
+        <p>
+            ML Trivia 2026 is a Mathematics competition designed to
+            encourage learning through fun and healthy competition.
+            Answer questions correctly and earn airtime rewards.
+        </p>
+
+    </section>
+
+<div class="wave-divider"></div>
+
+<!--================ PRIZE SECTION ================-->
+
+<section class="prizes hidden" id="prizes">
+
+    <div class="section-title">
+        <span>🏆 Rewards</span>
+        <h2>Prize Pool</h2>
+        <p>
+            Answer correctly, earn airtime, and compete for recognition.
+        </p>
+    </div>
+
+    <div class="prize-container">
+
+        <div class="prize-card">
+            <i class="fas fa-bolt"></i>
+            <h3>₦100</h3>
+            <p>For Every Correct Answer</p>
+        </div>
+
+        <div class="prize-card featured">
+            <i class="fas fa-trophy"></i>
+            <h3>₦1,000</h3>
+            <p>Maximum Airtime Reward</p>
+        </div>
+
+        <div class="prize-card">
+            <i class="fas fa-list-check"></i>
+            <h3>10 Questions</h3>
+            <p>Mathematics Challenge</p>
+        </div>
+
+    </div>
+
+</section>    
+
+<div class="wave-divider"></div>
+
+<!--================ RULES SECTION ================-->
+
+<section class="rules hidden" id="rules">
+
+    <div class="section-title">
+        <span>📋 Guidelines</span>
+        <h2>Competition Rules</h2>
+        <p>Please read the rules carefully before starting the quiz.</p>
+    </div>
+
+    <div class="rules-container">
+
+        <div class="rule-card">
+            <i class="fas fa-stopwatch"></i>
+            <h3>Timed Quiz</h3>
+            <p>Complete all questions before the timer reaches zero.</p>
+        </div>
+
+        <div class="rule-card">
+            <i class="fas fa-user-check"></i>
+            <h3>One Attempt</h3>
+            <p>Each participant is allowed only one submission.</p>
+        </div>
+
+        <div class="rule-card">
+            <i class="fas fa-square-root-variable"></i>
+            <h3>10 Questions</h3>
+            <p>Answer all mathematics questions to maximize your score.</p>
+        </div>
+
+        <div class="rule-card">
+            <i class="fas fa-scale-balanced"></i>
+            <h3>Fair Play</h3>
+            <p>No impersonation or cheating. Play honestly and respectfully.</p>
+        </div>
+
+    </div>
+    
+</section>
+
+<div class="wave-divider"></div>
+
+<!--================ COUNTDOWN SECTION ================-->
+
+<section class="countdown hidden">
+
+    <div class="section-title">
+        <span>⏳ Don't Miss It</span>
+        <h2>Competition Countdown</h2>
+        <p>The challenge begins soon. Be ready!</p>
+    </div>
+
+    <div class="countdown-container">
+
+        <div class="time-box">
+            <h2 id="days">00</h2>
+            <p>Days</p>
+        </div>
+
+        <div class="time-box">
+            <h2 id="hours">00</h2>
+            <p>Hours</p>
+        </div>
+
+        <div class="time-box">
+            <h2 id="minutes">00</h2>
+            <p>Minutes</p>
+        </div>
+
+        <div class="time-box">
+            <h2 id="seconds">00</h2>
+            <p>Seconds</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="wave-divider"></div>
+
+<!--================ FAQ SECTION ================-->
+
+<section class="faq hidden" id="faq">
+
+    <div class="section-title">
+        <span>❓ Need Help?</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know before participating.</p>
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Who can participate?</h3>
+                <i class="fas fa-plus"></i>
+            </div>
+
+            <div class="faq-answer">
+                <p>All registered members of the Mathematics League are eligible to participate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How many questions are there?</h3>
+                <i class="fas fa-plus"></i>
+            </div>
+
+            <div class="faq-answer">
+                <p>The competition consists of 10 carefully selected mathematics questions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How are winners selected?</h3>
+                <i class="fas fa-plus"></i>
+            </div>
+
+            <div class="faq-answer">
+                <p>Your score determines your airtime reward. Additional recognition awards may also be presented by the organizers.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Can I take the quiz more than once?</h3>
+                <i class="fas fa-plus"></i>
+            </div>
+
+            <div class="faq-answer">
+                <p>No. Each participant is allowed only one attempt.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="wave-divider"></div>
+
+<!--================ PARTNERS SECTION ================-->
+
+<section class="partners hidden">
+
+    <div class="section-title">
+        <span>🤝 Our Partners</span>
+        <h2>Powered by Great Partnerships</h2>
+        <p>Together, we're promoting mathematics, innovation, and technology.</p>
+    </div>
+
+    <div class="partners-container">
+
+        <div class="partner-card">
+            <i class="fas fa-calculator"></i>
+            <h3>Mathematics League</h3>
+            <p>Official Organizer</p>
+        </div>
+
+        <div class="partner-card featured-partner">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Techzila.inc</h3>
+            <p>Technology Partner</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="wave-divider"></div>
+
+<!--================ FOOTER ================-->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>ML Trivia <span>2026</span></h2>
+
+        <p>
+            Inspiring Excellence Through Mathematics.
+        </p>
+
+        <div class="socials">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ML Trivia. All Rights Reserved.
+            <br>
+            Designed & Developed by <strong>Techzila.inc</strong>
+        </p>
+
+    </div>
+
+</footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
