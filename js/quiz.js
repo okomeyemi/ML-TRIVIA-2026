@@ -209,7 +209,7 @@ document.getElementById("submitQuiz").onclick = () => {
 // TIMER
 // ===============================
 
-const QUIZ_TIME = 600;
+const QUIZ_TIME = 1800;
 
 let savedTime = Number(localStorage.getItem("quizTime"));
 
