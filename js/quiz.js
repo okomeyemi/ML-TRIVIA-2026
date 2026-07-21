@@ -195,8 +195,34 @@ document.getElementById("submitQuiz").onclick = () => {
     }
   });
   
-  localStorage.setItem("quizScore", score);
-  localStorage.setItem("quizSubmitted", "true");
+  const student = JSON.parse(localStorage.getItem("mlStudent"));
+
+db.collection("students").doc(student.id).update({
+    
+    score: score,
+    totalQuestions: questions.length,
+    percentage: Math.round((score / questions.length) * 100),
+    completedAt: firebase.firestore.FieldValue.serverTimestamp()
+    
+  })
+  .then(() => {
+    
+    localStorage.setItem("quizScore", score);
+    localStorage.setItem("quizSubmitted", "true");
+    
+    localStorage.removeItem("quizTime");
+    localStorage.removeItem("quizAnswers");
+    
+    window.location.href = "result.html";
+    
+  })
+  .catch((error) => {
+    
+    alert("Failed to save your result. Please check your internet connection.");
+    
+    console.error(error);
+    
+  });
   
   localStorage.removeItem("quizTime");
   localStorage.removeItem("quizAnswers");

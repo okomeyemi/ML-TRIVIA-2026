@@ -53,7 +53,7 @@ form.addEventListener("submit", function(e) {
     }
     
     
-const student = {
+   const student = {
     fullname,
     phone,
     registeredAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -62,19 +62,19 @@ const student = {
 // Save to Firebase
 db.collection("students").add(student)
     
-    .then(() => {
-        
-        // Save locally for the current quiz session
-        localStorage.setItem("mlStudent", JSON.stringify({
-            fullname,
-            phone
-        }));
-        
-        alert("Registration successful!");
-        
-        window.location.href = "instructions.html";
-        
-    })
+    .then((docRef) => {
+    
+    localStorage.setItem("mlStudent", JSON.stringify({
+        id: docRef.id,
+        fullname,
+        phone
+    }));
+    
+    alert("Registration successful!");
+    
+    window.location.href = "instructions.html";
+    
+})
     
     .catch((error) => {
     
