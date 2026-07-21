@@ -52,13 +52,34 @@ form.addEventListener("submit", function(e) {
         return;
     }
     
-    const student = {
+    
+const student = {
     fullname,
-    phone
+    phone,
+    registeredAt: firebase.firestore.FieldValue.serverTimestamp()
 };
 
-localStorage.setItem("mlStudent", JSON.stringify(student));
+// Save to Firebase
+db.collection("students").add(student)
     
-    window.location.href = "instructions.html";
+    .then(() => {
+        
+        // Save locally for the current quiz session
+        localStorage.setItem("mlStudent", JSON.stringify({
+            fullname,
+            phone
+        }));
+        
+        alert("Registration successful!");
+        
+        window.location.href = "instructions.html";
+        
+    })
     
+    .catch((error) => {
+    
+    alert(error.message);
+    
+});
+
 });
