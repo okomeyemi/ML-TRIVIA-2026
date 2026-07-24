@@ -1,8 +1,7 @@
-const startQuiz = document.getElementById("startQuiz");
+// ===============================
+// CHECK IF STUDENT REGISTERED
+// ===============================
 
-startQuiz.addEventListener("click", () => {
-    window.location.href = "quiz.html";
-});
 const student = localStorage.getItem("mlStudent");
 
 if (!student) {
@@ -10,16 +9,18 @@ if (!student) {
   window.location.href = "register.html";
 }
 
-
+// ===============================
+// START QUIZ
+// ===============================
 
 const startQuiz = document.getElementById("startQuiz");
 
-startQuiz.addEventListener("click", (e) => {
+startQuiz.addEventListener("click", () => {
   
-  e.preventDefault();
-  
+  // Save the quiz start time
   localStorage.setItem("quizStartTime", Date.now());
   
+  // Go to quiz page
   window.location.href = "quiz.html";
   
 });
