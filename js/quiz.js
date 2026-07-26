@@ -284,3 +284,12 @@ window.addEventListener("beforeunload", function(e) {
   e.returnValue = "";
   
 });
+
+
+db.collection("students").doc(student.id).update({
+
+    score: score,
+    percentage: percentage,
+    quizSubmitted: true
+
+});
