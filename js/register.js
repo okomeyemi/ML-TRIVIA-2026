@@ -59,27 +59,45 @@ form.addEventListener("submit", function(e) {
     registeredAt: firebase.firestore.FieldValue.serverTimestamp()
 };
 
-// Save to Firebase
-db.collection("students").add(student)
-    
-    .then((docRef) => {
-    
-    localStorage.setItem("mlStudent", JSON.stringify({
-        id: docRef.id,
-        fullname,
-        phone
-    }));
-    
-    alert("Registration successful!");
-    
-    window.location.href = "instructions.html";
-    
-})
-    
+// Check if phone number already exists
+db.collection("students")
+    .where("phone", "==", phone)
+    .get()
+    .then((snapshot) => {
+        
+        if (!snapshot.empty) {
+            alert("This WhatsApp number has already been used to register.");
+            return;
+        }
+        
+        // Save new student
+        db.collection("students").add(student)
+            
+            .then((docRef) => {
+                
+                localStorage.setItem("mlStudent", JSON.stringify({
+                    id: docRef.id,
+                    fullname,
+                    phone
+                }));
+                
+                alert("Registration successful!");
+                
+                window.location.href = "instructions.html";
+                
+            })
+            
+            .catch((error) => {
+                
+                alert(error.message);
+                
+            });
+        
+    })
     .catch((error) => {
-    
-    alert(error.message);
-    
-});
+        
+        alert(error.message);
+        
+    });
 
 });
