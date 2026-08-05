@@ -1,101 +1,92 @@
-/* ===============================
-   GOOGLE FONT & RESET
-================================= */
+/*==========================================
+            GOOGLE FONT
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==========================================
+            RESET
+==========================================*/
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:"Poppins",sans-serif;
 }
 
 body{
-    background:#f5f7ff;
+    background:#0d47a1;
+    color:#fff;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
     padding:20px;
 }
 
-/* ===============================
-   MAIN CONTAINER
-================================= */
 
-section{
+/*==========================================
+            CONTAINER
+==========================================*/
+
+.container{
     width:100%;
-    max-width:500px;
-    background:#fff;
-    padding:30px 25px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    text-align:center;
+    max-width:450px;
 }
 
-.hide{
+
+/*==========================================
+            PAGES
+==========================================*/
+
+.page{
     display:none;
+    background:#ffffff;
+    color:#222;
+    padding:30px 20px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
 }
 
-/* ===============================
-   LOGO
-================================= */
+.page.active{
+    display:block;
+}
+
+
+/*==========================================
+            WELCOME
+==========================================*/
 
 .logo{
-    width:90px;
-    margin-bottom:20px;
+    width:110px;
+    display:block;
+    margin:0 auto 20px;
 }
-
-/* ===============================
-   HEADINGS
-================================= */
 
 h1{
-    color:#0F52BA;
-    font-size:28px;
-    margin-bottom:15px;
-    line-height:1.3;
-}
-
-h2{
-    color:#222;
-    margin-bottom:20px;
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:10px;
 }
 
 p{
-    color:#666;
+    text-align:center;
     margin-bottom:25px;
-    line-height:1.6;
 }
 
-/* ===============================
-   INPUT
-================================= */
 
-input{
-    width:100%;
-    padding:15px;
-    border:2px solid #ddd;
-    border-radius:12px;
-    outline:none;
-    font-size:16px;
-    margin-bottom:20px;
-    transition:.3s;
-}
-
-input:focus{
-    border-color:#0F52BA;
-}
-
-/* ===============================
-   BUTTONS
-================================= */
+/*==========================================
+            BUTTONS
+==========================================*/
 
 button{
     width:100%;
     padding:15px;
     border:none;
-    border-radius:12px;
-    background:#0F52BA;
+    border-radius:10px;
+    background:#0d47a1;
     color:#fff;
     font-size:16px;
     font-weight:600;
@@ -104,120 +95,86 @@ button{
 }
 
 button:hover{
-    background:#0b3f90;
+    background:#1565c0;
 }
 
-/* ===============================
-   TOP BAR
-================================= */
 
-.topBar{
+/*==========================================
+            INPUT
+==========================================*/
+
+.inputBox{
+    margin-bottom:20px;
+}
+
+.inputBox label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.inputBox input{
+    width:100%;
+    padding:14px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.inputBox input:focus{
+    border-color:#0d47a1;
+}
+
+
+/*==========================================
+            QUIZ
+==========================================*/
+
+.quiz-header{
     display:flex;
     justify-content:space-between;
     margin-bottom:15px;
-    font-weight:600;
-    color:#0F52BA;
 }
-
-/* ===============================
-   PROGRESS BAR
-================================= */
 
 .progress{
-    width:100%;
-    height:10px;
+    height:8px;
     background:#ddd;
-    border-radius:20px;
+    border-radius:50px;
     overflow:hidden;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
-.progressFill{
-    width:0%;
+#progressBar{
+    width:10%;
     height:100%;
-    background:#FFD700;
-    transition:.4s;
+    background:#0d47a1;
 }
 
-/* ===============================
-   ANSWERS
-================================= */
+#question{
+    margin-bottom:25px;
+    font-size:20px;
+}
 
 #answers{
     display:flex;
     flex-direction:column;
     gap:15px;
-    margin:25px 0;
-}
-
-.option{
-    background:#f7f7f7;
-    color:#222;
-    border:2px solid transparent;
-    text-align:left;
-    padding:15px;
-}
-
-.option:hover{
-    border-color:#0F52BA;
-    background:#eef4ff;
-}
-
-.option.correct{
-    background:#28a745;
-    color:#fff;
-}
-
-.option.wrong{
-    background:#dc3545;
-    color:#fff;
-}
-
-.option.selected{
-    border-color:#0F52BA;
-}
-
-/* ===============================
-   TROPHY
-================================= */
-
-.trophy{
-    width:120px;
     margin-bottom:20px;
 }
 
-/* ===============================
-   SCORE
-================================= */
 
-#score{
-    font-size:50px;
-    color:#0F52BA;
+/*==========================================
+            RESULT
+==========================================*/
+
+#finalScore{
+    text-align:center;
+    color:#0d47a1;
     margin:20px 0;
 }
 
-#message{
-    font-size:20px;
+#performance{
+    font-size:18px;
     font-weight:600;
-    color:#444;
-}
-
-/* ===============================
-   RESPONSIVE
-================================= */
-
-@media(max-width:500px){
-
-    section{
-        padding:25px 20px;
-    }
-
-    h1{
-        font-size:22px;
-    }
-
-    #score{
-        font-size:40px;
-    }
-
 }

@@ -1,103 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Well Do You Know Maths League?</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>ML Trivia 2026</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-    <!-- Welcome Screen -->
-    <section id="welcomeScreen">
+    <main class="container">
 
-        <img src="images/logo.png" alt="Maths League Logo" class="logo">
+        <!-- ========= WELCOME SCREEN ========= -->
 
-        <h1>HOW WELL DO YOU KNOW MATHS LEAGUE?</h1>
+        <section id="welcome" class="page active">
 
-        <p>
-            Test your knowledge about Maths League and see how well you know our community.
-        </p>
+            <img src="assets/logo.png" alt="Maths League" class="logo">
 
-        <input
-            type="text"
-            id="playerName"
-            placeholder="Enter your name"
-        >
+            <h1>ML TRIVIA 2026</h1>
 
-        <button id="startBtn">
-            Start Quiz
-        </button>
+            <p>
+                How Well Do You Know Maths League?
+            </p>
 
-    </section>
+            <button id="startBtn">
+                START QUIZ
+            </button>
 
-    <!-- Quiz Screen -->
-    <section id="quizScreen" class="hide">
+        </section>
 
-        <div class="topBar">
 
-            <div id="questionNumber">
-                Question 1 / 20
+        <!-- ========= REGISTRATION ========= -->
+
+        <section id="register" class="page">
+
+            <h2>Player Verification</h2>
+
+            <form id="registerForm">
+
+                <div class="inputBox">
+
+                    <label>Registration Number</label>
+
+                    <input
+                        type="text"
+                        id="regNo"
+                        placeholder="ML2026XXXX"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    VERIFY
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ========= QUIZ ========= -->
+
+        <section id="quiz" class="page">
+
+            <div class="quiz-header">
+
+                <span id="questionNumber">
+                    Question 1 / 10
+                </span>
+
+                <span id="timer">
+                    15s
+                </span>
+
             </div>
 
-            <div id="timer">
-                30s
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
             </div>
 
-        </div>
+            <h2 id="question">
 
-        <div class="progress">
-            <div class="progressFill"></div>
-        </div>
+                Question goes here...
 
-        <h2 id="question">
-            Question goes here...
-        </h2>
+            </h2>
 
-        <div id="answers">
+            <div id="answers">
 
-            <button class="option"></button>
-            <button class="option"></button>
-            <button class="option"></button>
-            <button class="option"></button>
+                <!-- JavaScript -->
 
-        </div>
+            </div>
 
-        <button id="nextBtn">
-            Next
-        </button>
+            <button id="nextBtn">
 
-    </section>
+                NEXT
 
-    <!-- Result Screen -->
-    <section id="resultScreen" class="hide">
+            </button>
 
-        <img src="images/trophy.png" alt="Trophy" class="trophy">
+        </section>
 
-        <h2>Quiz Completed!</h2>
 
-        <h1 id="score">
-            18 / 20
-        </h1>
+        <!-- ========= RESULT ========= -->
 
-        <p id="message">
-            Maths League Legend 🏆
-        </p>
+        <section id="result" class="page">
 
-        <button id="restartBtn">
-            Play Again
-        </button>
+            <h1>Quiz Completed</h1>
 
-    </section>
+            <h2 id="finalScore">
+                0 / 10
+            </h2>
 
-    <script src="questions.js"></script>
-    <script src="script.js"></script>
+            <p id="performance">
+
+                Excellent!
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src=",js/questions.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
