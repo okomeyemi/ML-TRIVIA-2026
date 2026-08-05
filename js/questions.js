@@ -67,7 +67,7 @@ const questions = [
 },
 
 {
-    question: "What position do you think JQ was invited into Maths League recently?",
+    question: "What position do you think got initiated into Maths League recently?",
     answers: [
         "Director of Technology",
         "Admin of the League",

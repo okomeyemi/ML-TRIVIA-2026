@@ -78,6 +78,32 @@ function loadQuestion() {
     timer.textContent = `${timeLeft}s`;
 
     startTimer();
+    
+    function startTimer() {
+
+    clearInterval(countdown);
+
+    timeLeft = 15;
+
+    timer.textContent = `${timeLeft}s`;
+
+    countdown = setInterval(() => {
+
+        timeLeft--;
+
+        timer.textContent = `${timeLeft}s`;
+
+        if (timeLeft <= 0) {
+
+            clearInterval(countdown);
+
+            nextQuestion();
+
+        }
+
+    }, 1000);
+
+}
 
     selectedAnswer = null;
 
@@ -108,5 +134,76 @@ function loadQuestion() {
         answers.appendChild(button);
 
     });
+
+}
+
+function selectAnswer(button, index) {
+
+    const buttons = document.querySelectorAll(".answer-btn");
+
+    buttons.forEach(btn => btn.classList.remove("selected"));
+
+    button.classList.add("selected");
+
+    selectedAnswer = index;
+
+    nextBtn.style.display = "block";
+
+}
+
+
+
+
+nextBtn.addEventListener("click", nextQuestion);
+
+
+
+function nextQuestion() {
+
+    clearInterval(countdown);
+
+    if (selectedAnswer !== null &&
+        selectedAnswer === questions[currentQuestion].correct) {
+
+        score++;
+
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+
+        loadQuestion();
+
+    } else {
+
+        showResult();
+
+    }
+
+}
+
+
+function showResult() {
+
+    clearInterval(countdown);
+
+    showPage(result);
+
+    finalScore.textContent = `${score} / ${questions.length}`;
+
+    if (score >= 8) {
+
+        performance.textContent = "Excellent Performance!";
+
+    } else if (score >= 5) {
+
+        performance.textContent = "Good Performance!";
+
+    } else {
+
+        performance.textContent = "Keep Practising!";
+
+    }
 
 }
